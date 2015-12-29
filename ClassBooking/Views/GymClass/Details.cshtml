@@ -1,0 +1,92 @@
+﻿@model ClassBooking.Models.GymClass
+@using ClassBooking.Authorisation
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Gym class details</h4>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxCapacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxWaitList)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxWaitList)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nBookings)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nBookings)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassDateTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClassDateTime)
+        </dd>
+    </dl>
+    <span>&nbsp;</span>
+<div class="col-md-6">
+    @if (Model.Bookings != null && Model.Bookings.Any())
+    {
+        <table class="table">
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Option
+                </th>
+            </tr>
+            @foreach (var item in Model.Bookings)
+            {
+                var rowClass = item.Waiting ? "active" : "";
+                <tr class="@rowClass">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GymMember.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GymMember.FirstName)
+                    </td>
+                    <td>
+                        @if (User.IsAdmin())
+                        {
+                            @Html.ActionLink("Cancel", "CancelBooking", new { classId = item.GymClassId, memberId = item.GymMemberId }, new { @class = "btn btn-danger" })
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    </div>
+    <div class="col-md-12">
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.GymClassId }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>

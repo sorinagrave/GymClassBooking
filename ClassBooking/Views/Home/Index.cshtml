@@ -1,0 +1,120 @@
+﻿@model ClassBooking.Models.GymMemberBookings
+@using ClassBooking.Authorisation
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Gym classes</h4>
+<span>&nbsp;</span>
+@if (Model.GymClasses != null && Model.GymClasses.Count() > 0)
+{
+    if (User.IsAdmin())
+    {
+        <div class="form-group">
+            <p class = "control-label col-md-2">Book a member:</p>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.CurrentMember.GymMemberId,
+                 new SelectList(Model.AllMembers, "GymMemberId", "FullName", Model.CurrentMember.GymMemberId),
+                 "-- select member --",
+                 new { @class = "form-control", onchange = "onMemberChanged()", @id = "txtMemberId" })
+            </div>
+        </div>
+    }
+    <span>&nbsp;</span>
+    <table class = "table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GymClasses[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymClasses[0].Type.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymClasses[0].ClassTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GymClasses[0].ClassDate)
+            </th>
+            <th>Number of bookings</th>
+            <th>
+                Option
+            </th>
+        </tr>
+
+        @foreach (var item in Model.GymClasses)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("Details","GymClass", new { id=item.GymClassId })">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClassTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ClassDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nBookings)
+                </td>
+                <td>
+                @if (User.IsAdmin())
+                {
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.BookedClass)
+                    {
+                    @Html.ActionLink("Cancel", "CancelMember", new { classId = item.GymClassId, memberId = Model.CurrentMember.GymMemberId }, new { @class = "btn btn-danger" })
+                    }
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.BookedWaiting)
+                    {
+                    @Html.ActionLink("Cancel Waiting", "CancelMember", new { classId = item.GymClassId, memberId = Model.CurrentMember.GymMemberId }, new { @class = "btn btn-danger" })
+                    }
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.EligibleClass)
+                    {
+                    @Html.ActionLink("Book", "BookMember", new { classId = item.GymClassId, memberId = Model.CurrentMember.GymMemberId }, new { @class = "btn btn-info" })
+                    }
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.EligibleWaiting)
+                    {
+                    @Html.ActionLink("Book Waiting", "BookMember", new { classId = item.GymClassId, memberId = Model.CurrentMember.GymMemberId }, new { @class = "btn btn-info" })
+                    }
+                 }
+                else if (User.IsMember())
+                {
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.BookedClass)
+                    {
+                        @Html.ActionLink("Cancel", "Cancel", new { classId = item.GymClassId }, new { @class = "btn btn-danger" })
+                    }
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.BookedWaiting)
+                    {
+                        @Html.ActionLink("Cancel Waiting", "Cancel", new { classId = item.GymClassId }, new { @class = "btn btn-danger" })
+                    }
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.EligibleClass)
+                    {
+                        @Html.ActionLink("Book", "Book", new { classId = item.GymClassId }, new { @class = "btn btn-info" })
+                    }
+                    if (item.MemberStatus == ClassBooking.Models.MemberClassStatus.EligibleWaiting)
+                    {
+                        @Html.ActionLink("Book Waiting", "Book", new { classId = item.GymClassId }, new { @class = "btn btn-info" })
+                    }
+                }
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+<script language="JavaScript">
+    function onMemberChanged() {
+        jQuery.support.cors = true;
+        var id = $('#txtMemberId').val();
+        if (id > 0) {
+            var path = '@Url.Action("Index")';
+            window.location.href = path + '?memberId=' + id;
+        }
+    }
+</script>

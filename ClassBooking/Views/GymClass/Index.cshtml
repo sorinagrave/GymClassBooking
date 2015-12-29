@@ -1,0 +1,67 @@
+﻿@using ClassBooking.Authorisation
+@model IEnumerable<ClassBooking.Models.GymClass>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Gym classes</h4>
+<span>&nbsp;</span>
+<p>
+    @if (User.IsAdmin())
+    {
+        @Html.ActionLink("Create New", "Create", "GymClass", null, new { @class = "btn btn-default" })
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaxWaitList)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href="@Url.Action("Details", new { id=item.GymClassId })">
+                @Html.DisplayFor(modelItem => item.Description)
+            </a>    
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaxWaitList)
+        </td>
+        <td>
+        @if (User.IsAdmin())
+        {
+            @Html.ActionLink("Edit", "Edit", new { id = item.GymClassId }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Details", "Details", new { id = item.GymClassId }, new { @class = "btn btn-default" }) 
+            @Html.ActionLink("Delete", "Delete", new { id = item.GymClassId }, new { @class = "btn btn-default" })
+        }
+        </td>
+    </tr>
+}
+
+</table>

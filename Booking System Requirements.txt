@@ -1,0 +1,25 @@
+Admin page to add/remove users to the class system:
+- Edit form with Staff ID + Name
+
+Admin page to add class
+- Edit form with Date, time, class name (spinning, tabata, circuits, other), number of slots, number of waiting list slots
+- Delete class
+
+Admin page to view/download class - e.g. specific list of classes to be emailed
+- View/download class list by week
+- View/download class lisy by week with the bookings
+
+Admin page to book someone to a class
+- Book user to a class. Select user, class (future only). If class full, message + option to continue to book on the waiting list
+- Book someone on the waiting list: if waiting list full, user message
+- Page to allow admin to cancel user booking or cancel waiting list.
+- Page to update attendance post class for the admin to tick that the users have attended 
+	(available when current date+Time>class date+time).
+
+User page to book or cancel
+- select class (future date only) - shows all the bookings for that class. Book button if class not full.
+- if class full - Book on the waiting list
+- Page to allow user to Cancel booking or cancel waiting list. If booking cancelled, 
+first one from the waiting list is booked and removed from the top of the waiting list.
+
+Scheduler job to delete all the class bookings older than a week.

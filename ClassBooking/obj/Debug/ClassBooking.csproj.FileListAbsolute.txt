@@ -1,0 +1,103 @@
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\csc.exe
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\System.Collections.Immutable.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\vbc.exe
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\VBCSCompiler.exe
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\roslyn\VBCSCompiler.exe.config
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\ClassBooking.dll.config
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\ClassBooking.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\ClassBooking.pdb
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Antlr3.Runtime.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\EntityFramework.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\EntityFramework.SqlServer.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Google.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Web.Infrastructure.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Newtonsoft.Json.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Owin.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Helpers.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Mvc.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Optimization.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Razor.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Deployment.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.WebPages.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Razor.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\WebGrease.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Helpers.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Mvc.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Optimization.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.Razor.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.WebPages.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Deployment.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Razor.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Antlr3.Runtime.pdb
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Newtonsoft.Json.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\EntityFramework.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\EntityFramework.SqlServer.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Google.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\obj\Debug\ClassBooking.csprojResolveAssemblyReference.cache
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\obj\Debug\ClassBooking.dll
+c:\users\sorinagrave\documents\visual studio 2015\Projects\GymClassBooking\ClassBooking\obj\Debug\ClassBooking.pdb
+C:\dev\GymClassBooking\ClassBooking\bin\ClassBooking.dll.config
+C:\dev\GymClassBooking\ClassBooking\bin\ClassBooking.dll
+C:\dev\GymClassBooking\ClassBooking\bin\ClassBooking.pdb
+C:\dev\GymClassBooking\ClassBooking\bin\Antlr3.Runtime.dll
+C:\dev\GymClassBooking\ClassBooking\bin\EntityFramework.dll
+C:\dev\GymClassBooking\ClassBooking\bin\EntityFramework.SqlServer.dll
+C:\dev\GymClassBooking\ClassBooking\bin\Microsoft.Web.Infrastructure.dll
+C:\dev\GymClassBooking\ClassBooking\bin\Newtonsoft.Json.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Data.SQLite.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Data.SQLite.EF6.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Data.SQLite.Linq.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Helpers.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Mvc.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Optimization.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Razor.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Deployment.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.WebPages.dll
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Razor.dll
+C:\dev\GymClassBooking\ClassBooking\bin\WebGrease.dll
+C:\dev\GymClassBooking\ClassBooking\bin\Antlr3.Runtime.pdb
+C:\dev\GymClassBooking\ClassBooking\bin\Newtonsoft.Json.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Data.SQLite.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Helpers.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Mvc.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Optimization.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.Razor.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.WebPages.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Deployment.xml
+C:\dev\GymClassBooking\ClassBooking\bin\System.Web.WebPages.Razor.xml
+C:\dev\GymClassBooking\ClassBooking\bin\EntityFramework.xml
+C:\dev\GymClassBooking\ClassBooking\bin\EntityFramework.SqlServer.xml
+C:\dev\GymClassBooking\ClassBooking\obj\Debug\ClassBooking.dll
+C:\dev\GymClassBooking\ClassBooking\obj\Debug\ClassBooking.pdb
+C:\dev\GymClassBooking\ClassBooking\obj\Debug\ClassBooking.csprojResolveAssemblyReference.cache

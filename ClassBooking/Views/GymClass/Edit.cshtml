@@ -1,0 +1,153 @@
+﻿@model ClassBooking.Models.GymClass
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Edit gym class</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    <div class="col-md-6">
+        <div class="form-horizontal">
+           
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.GymClassId)
+
+   
+            <div class="form-group">
+                @Html.LabelFor(model => model.GymClassTypeId, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.GymClassTypeId,
+     new SelectList(Model.Types, "GymClassTypeId", "Name", Model.GymClassTypeId),
+     "-- select class type --",
+     new { @class = "form-control", onchange = "getClassTypeDefaults()", @id = "classTypeDropDown" })
+                    @Html.ValidationMessageFor(model => model.GymClassTypeId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ClassDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ClassDate, new { htmlAttributes = new { @class = "form-control", @id = "txtClassDate" } })
+                    @Html.ValidationMessageFor(model => model.ClassDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ClassTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ClassTime, new { htmlAttributes = new { @class = "form-control", @id = "txtClassTime" } })
+                    @Html.ValidationMessageFor(model => model.ClassTime, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaxCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MaxCapacity, new { htmlAttributes = new { @class = "form-control", @id = "txtMaxCapacity" } })
+                    @Html.ValidationMessageFor(model => model.MaxCapacity, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MaxWaitList, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MaxWaitList, new { htmlAttributes = new { @class = "form-control", @id = "txtMaxWaitList" } })
+                    @Html.ValidationMessageFor(model => model.MaxWaitList, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+        </div>
+    if (Model.Bookings != null && Model.Bookings.Any())
+    {
+        <div class="col-md-6">
+            <table class="table">
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Attended
+                    </th>
+                </tr>
+                @foreach (var item in Model.Bookings)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GymMember.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GymMember.FirstName)
+                        </td>
+                        <td>
+                            @Html.CheckBoxFor(modelItem => item.Attended)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    }
+
+    <div class="col-lg-12">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+    }
+<script language="JavaScript">
+    function getClassTypeDefaults() {
+        jQuery.support.cors = true;
+        var id = $('#classTypeDropDown').val();
+        if (id > 0) {
+
+            var actionUrl = '@Url.Action("GymClassTypeDetails", "GymClassTypes")'
+
+            $.ajax({
+                type: "GET",
+                url: actionUrl,
+                dataType: "json",
+                data: { classTypeId: id },
+                success: displayClassTypeDefaults,
+                error: errorFunc
+            });
+        }
+    }
+    function displayClassTypeDefaults(response) {
+        if (response != null) {
+            $('#txtMaxCapacity').val(response.MaxCapacity);
+            $('#txtMaxWaitList').val(response.MaxWaitList);
+            $('#txtClassTime').val(response.ClassTime);
+            var curDate = new Date();
+            var curDayOfTheWeek = curDate.getDay();
+            var daysToClass = response.DayOfTheWeek - curDayOfTheWeek;
+            if (daysToClass < 0) {
+                daysToClass += 7;
+            }
+            curDate.setDate(curDate.getDate() + daysToClass);
+            var classDay = curDate.getDate();
+            var classMonth = curDate.getMonth() + 1;
+            var classYear = curDate.getFullYear();
+            $('#txtClassDate').val(classDay + "/" + classMonth + "/" + classYear)
+        }
+    }
+    function errorFunc(err) {
+
+    }
+</script>
